@@ -1,0 +1,101 @@
+<!DOCTYPE hyml>
+<html>
+	<head>
+		<title> formulaire </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="main.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<form id="Envoyer">
+			<h1>Creer un CV</h1><hr/>
+			<div id="left">
+			<section  id="image">
+				<i class="fa fa-caméra"> </i> <input type="file">
+			</section>
+			<h4><i class="fas fa-info-circle"> </i>  Informatios personnel</h4>
+			<section id="infoPer">
+			<label>Nom:</label>
+			<input placeholder="Entrer votre nom" type="text" id="nom" ><br/>
+			<br/>
+			<label>Prénom:</label>
+			<input placeholder="Entrer votre prénom" type="text" id="prenom"><br/>
+			<br/>
+			<label>Age:</label>
+			<input placeholder="Entrer votre Age" type="text" id="age"><br/>
+			<br/>
+			<label><i class="fa fa-map-marker"></i> Adresse:</label>
+			<input placeholder="Entrer votre adresse" type="text" id="adresse" ><br/>
+			<br/>
+			<label><i class="fas fa-envelope"> </i> Email:</label>
+			<input placeholder="Entrer votre Email" type="email" id="email"><br/>
+			<br/>
+			<label><i class="fas fa-phone"> </i>  Tél:</label>
+			<input placeholder="Entrer votre téléphone" type="tel" id="tel"><br/>
+			</section>
+			</div>
+			
+			<div id="right">
+			<label><h4>Titre de cv:</h4></label>
+			<input placeholder="Entrer le titre de cv" type="text" id="title" ><br/>
+			<h4>Objectif personnel:</h4>
+			<textarea cols="133" id="n1"> </textarea> <br/>
+			<h4><i class="fas fa-graduation-cap"> </i> Formation et Diplôme :</h4>
+			<div class="rth" id="formation">
+			
+				<ul><li><input type="text" id="dp"></li></ul>
+				
+			
+			</div>
+			
+			<button class="btn">Ajouter un champs</button>
+			<script>
+				let destination= document.querySelector('#formation');
+				let btn=document.querySelector('.btn');
+				btn.addEventListener('click',addChamps);
+				function addChamps(e){
+					e.preventDefault();
+					destination.innerHTML+='<ul><li><input type="text" id="dp"></li></ul>'
+				}
+			</script>
+			<h4> <i class="fas fa-wrench"> </i> Compétences Techniques:</h4>
+			<section class="rth" id="tech">
+				<input type="checkbox" id="c" name="c">
+				<label for="c">C</label><br/>
+				<input type="checkbox" id="java" name="java">
+				<label for="java">Java</label><br/>
+				<input type="checkbox" id="css" name="css">
+				<label for="css">CSS et HTML </label><br/>
+				<input type="checkbox" id="js" name="js">
+				<label for="js">JavaScript</label><br/>
+				<input type="checkbox" id="sql" name="sql">
+				<label for="sql">SQL</label><br/>
+				<input type="checkbox" id="python" name="python">
+				<label for="python">Python</label><br/>
+			</section>
+			<h4><i class="fa fa-language"> </i> Compétences Linguistiques :</h4>
+			<section class="rth" id="lang">
+				<label for="Arabe">Arabe</label>
+				<center><input type="range" class="rang"></center>
+				<label for="Arabe">Francais</label>
+				<center><input type="range" class="rang" ></center>
+				<label for="Arabe">Anglais</label>
+				<center><input type="range" class="rang"></center>
+				<label for="Arabe">Tamazight</label>
+				<center><input type="range" class="rang"></center>
+			</section>
+			<h4>Autre informations,loisirs,sport ...  :</h4>
+			<section class="rth" id="dernier">
+			<textarea cols="133" id="n2"> </textarea><br/>
+			</section>
+			<br/>
+			<br/>
+			</div>
+			<center>
+			<input type="submit" class="btn" id="b1" value="Envoyer">
+			</center>
+		</form>
+        <script type="text/javascript" src="main.js" ></script>
+	</body>
+</html>
